@@ -1,0 +1,57 @@
+% 本套各册使用同一字号与页式；不对整页做缩放。
+\usepackage[left=14mm,right=14mm,top=19mm,bottom=17mm,headheight=16pt,headsep=5mm,footskip=9mm]{geometry}
+\usepackage{amsmath,amssymb,array,graphicx,xcolor,tikz,adjustbox,hyperref,needspace,booktabs,tabularx,enumitem,fancyhdr,etoolbox,multicol}
+\usetikzlibrary{calc,angles,quotes,arrows.meta,patterns,decorations.pathreplacing,positioning}
+\xeCJKDeclareCharClass{CJK}{"2460 -> "2473}
+\definecolor{answerred}{RGB}{196,20,38}
+\definecolor{bookred}{gray}{0}
+\definecolor{bookpink}{gray}{1}
+\definecolor{bookblue}{gray}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\setlength{\emergencystretch}{3em}
+\setlength{\abovedisplayskip}{3pt}\setlength{\belowdisplayskip}{3pt}
+\setlength{\abovedisplayshortskip}{2pt}\setlength{\belowdisplayshortskip}{2pt}
+\setlength{\jot}{1pt}
+\setlength{\columnsep}{7mm}\setlength{\columnseprule}{.25pt}
+\setlist{nosep,leftmargin=1.8em,topsep=2pt,itemsep=2pt}
+\hypersetup{unicode=true,hidelinks,pdfcreator={XeLaTeX / ctexbook},bookmarksnumbered=false}
+\newcommand{\SourceNumber}{1}\newcommand{\SourceTopic}{}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\normalsize\SourceTopic}
+\fancyhead[C]{\normalsize 原书第\SourceNumber 页}
+\fancyfoot[C]{\normalsize\thepage}
+\renewcommand{\headrulewidth}{.35pt}
+\fancypagestyle{plain}{\fancyhf{}\fancyhead[L]{\normalsize\SourceTopic}\fancyhead[C]{\normalsize 原书第\SourceNumber 页}\fancyfoot[C]{\normalsize\thepage}\renewcommand{\headrulewidth}{.35pt}}
+\newcommand{\SourcePage}[2]{\clearpage\gdef\SourceNumber{#1}\gdef\SourceTopic{#2}\phantomsection\label{src:#1}\pdfbookmark[0]{原书第#1页}{source-#1}}
+\newcommand{\BookPage}[2]{}\newcommand{\FirstBookPage}[2]{}\newcommand{\bookpage}[1]{}
+\newcommand{\QHeading}[1]{\par\addvspace{6pt}{\heiti\normalsize\color{black}#1}\par\nobreak\vspace{2pt}}
+\ctexset{subsection={format=\normalsize\heiti,beforeskip=6pt,afterskip=2pt}}
+\newcommand{\Problem}[1]{\par\noindent{\color{black}#1}\par\nobreak}
+\newcommand{\PlainItem}[1]{\par\noindent{\color{black}#1}\par}
+\newcommand{\Answer}[1]{\par\begingroup\color{answerred}#1\par\endgroup}
+\newcommand{\Formula}[1]{\par\noindent$\displaystyle#1$\par}
+\newcommand{\Equation}[1]{\Formula{#1}}
+\newcommand{\CalcBlock}[3][]{\par\noindent\begin{minipage}[t]{\linewidth}\color{black}（#2）\ifstrempty{#1}{}{\quad\textcolor{answerred}{#1}}\par\nobreak\Formula{#3}\end{minipage}\par}
+\newcommand{\MethodTitle}[1]{\par{\color{answerred}\heiti #1}\par\nobreak}
+\newcommand{\MethodBlock}[3]{\par\noindent\begin{minipage}{\linewidth}\color{answerred}{\heiti #1}\par #2\par\Formula{#3}\end{minipage}\par}
+\newenvironment{oralgrid}{\par\begingroup\setlength{\parskip}{2pt}}{\par\endgroup}
+\newcommand{\OralItem}[3]{\noindent\begin{minipage}[t]{.245\linewidth}\strut$#2=\textcolor{answerred}{#3}$\strut\end{minipage}\allowbreak\ignorespaces}
+\newcommand{\DataTable}[2]{\par\begingroup\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}\noindent\begin{tabularx}{\linewidth}{|*{#1}{>{\centering\arraybackslash}X|}}\hline #2\end{tabularx}\par\endgroup}
+\newcommand{\q}[5]{\node[anchor=north west,inner sep=0pt,outer sep=0pt,align=left,text width=\dimexpr#3bp*2/3\relax,font=\normalsize,text=black] at ({#1/1.5},{#2/1.5}) {#5};}
+\newcommand{\ans}[5]{\node[anchor=north west,inner sep=0pt,outer sep=0pt,align=left,text width=#3bp,font=\normalsize,text=answerred] at (#1,#2) {#5};}
+\newcommand{\hdhead}[2]{}\newcommand{\hdsection}[3]{}
+\tikzset{every picture/.style={line cap=round,line join=round,font=\normalsize}, hdheight/.style={draw=answerred,dashed,line width=.85pt},hdgrid/.style={draw=black,line width=.23pt},hdoutline/.style={draw=black,line width=.65pt},outline/.style={draw=black,line width=.65pt},guide/.style={draw=black,line width=.28pt},axis/.style={draw=black,dash pattern=on 3pt off 2pt,line width=.5pt},thinrule/.style={draw=black,line width=.4pt},measure/.style={draw=black,line width=.4pt},number/.style={font=\normalsize,inner sep=1pt}}
+\newcommand{\keyheading}[1]{\QHeading{#1}}
+\newcommand{\keygrid}[2]{\par\begingroup\renewcommand{\arraystretch}{1.2}\noindent\begin{tabularx}{\linewidth}{@{}*{#1}{>{\centering\arraybackslash}X}@{}}#2\end{tabularx}\par\endgroup}
+\newcommand{\WorkSpace}[1]{\par\vspace{#1mm}}
+\newenvironment{QuestionGrid}[1]{\par\noindent\begin{tabular}{@{}*{#1}{p{\dimexpr(\linewidth-12pt*#1+12pt)/#1\relax}}@{}}}{\end{tabular}\par}
+\newcommand{\MathCell}[3]{\begin{minipage}[t]{\linewidth}\strut #1$\displaystyle #2$\par\vspace{#3mm}\end{minipage}}
+\newcommand{\QuestionFigure}[1]{\par\noindent\input{#1}\par}
+\newsavebox{\SourceBox}
+\newcommand{\OnePageInput}[1]{\setbox\SourceBox=\vbox{\hsize=\textwidth\linewidth=\textwidth\columnwidth=\textwidth\normalsize\input{#1}\par}\typeout{SOURCEHEIGHT \SourceNumber: \the\ht\SourceBox / \the\textheight}\nointerlineskip\box\SourceBox}
+\renewcommand{\Needspace}[1]{}\renewcommand{\needspace}[1]{}
+\raggedbottom\clubpenalty=10000\widowpenalty=10000
+
+% 原书第77页的独立矢量题图。
+\input{../p77_tikz.tex}

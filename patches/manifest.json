@@ -1,0 +1,117 @@
+{
+  "format": 1,
+  "baseline_files": {
+    "口算题目.pdf": {
+      "size": 689985,
+      "sha256": "9a2675cbb1050de22df28b43475b97db5bce6c7e7e279694ceda82f5c23dfb53"
+    },
+    "口算速查.pdf": {
+      "size": 663954,
+      "sha256": "3f032d4b7127e638f4127bbd39591d6f9bd4fe17df904fde9e68dd0c4eb49c4b"
+    },
+    "口算答案.pdf": {
+      "size": 1677416,
+      "sha256": "7eb4255789ad6850e8a9cc26504a85c3cbede59b5c17973c083f036d6763ed53"
+    },
+    "口算合订.pdf": {
+      "size": 3136672,
+      "sha256": "8d2df7c139de1c9b04221a20c37a9de7de709c5522b5220c0a663609866e1131"
+    }
+  },
+  "final_files": {
+    "口算题目.pdf": {
+      "size": 851998,
+      "sha256": "ecfd56f9230ef1da62525dbf18899b3a84a2ab8573ae17e66221682ef802776b"
+    },
+    "口算速查.pdf": {
+      "size": 1235078,
+      "sha256": "ed791d9654f9aad22fcc16f7fb574e33475816f9711f7417ba17f145b3ee4188"
+    },
+    "口算题卡四上答案.pdf": {
+      "size": 35404798,
+      "sha256": "eba3515b64170e6d75719318d18dd98e22b610474679ad4894a26ac565c2db2e"
+    },
+    "口算合订.pdf": {
+      "size": 37278244,
+      "sha256": "e5fcae20ade73c8716e7aceff5e3ecc41cf9d8e779bf040c5540e562072246fd"
+    }
+  },
+  "patches": {
+    "questions.zst": {
+      "output": "口算题目.pdf",
+      "refs": [
+        [
+          "b",
+          "口算题目.pdf"
+        ]
+      ],
+      "file": {
+        "size": 112384,
+        "sha256": "7aaa7e1b82570afd6de5b20bb41476e59f2ac7916e7197fcb8ea23ac9aaa4698"
+      }
+    },
+    "quick-key.zst": {
+      "output": "口算速查.pdf",
+      "refs": [
+        [
+          "b",
+          "口算速查.pdf"
+        ]
+      ],
+      "file": {
+        "size": 294051,
+        "sha256": "0bac540b03b95c99011ba5444f6dbbc880a6d28c290d9339e8f5d372b146c632"
+      }
+    },
+    "worked-answers.zst": {
+      "output": "口算题卡四上答案.pdf",
+      "refs": [
+        [
+          "b",
+          "口算题目.pdf"
+        ],
+        [
+          "b",
+          "口算速查.pdf"
+        ],
+        [
+          "b",
+          "口算答案.pdf"
+        ],
+        [
+          "b",
+          "口算合订.pdf"
+        ]
+      ],
+      "file": {
+        "size": 3570624,
+        "sha256": "a81e64d9429f983e71fad016fc5c1964bccebf7c9b000ce14c140387e32c7f65"
+      }
+    },
+    "combined.zst": {
+      "output": "口算合订.pdf",
+      "refs": [
+        [
+          "b",
+          "口算合订.pdf"
+        ],
+        [
+          "f",
+          "口算题目.pdf"
+        ],
+        [
+          "f",
+          "口算速查.pdf"
+        ],
+        [
+          "f",
+          "口算题卡四上答案.pdf"
+        ]
+      ],
+      "file": {
+        "size": 1111996,
+        "sha256": "b50aa4cda603c4c7745cff6ec5549b028eba62f38370122629f411ca82557c6d"
+      }
+    }
+  }
+}

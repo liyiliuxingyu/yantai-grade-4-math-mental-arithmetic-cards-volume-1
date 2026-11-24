@@ -1,0 +1,21 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,draw=black,text=black]
+\begin{scope}
+\clip (66.392,123.059) rectangle (542.272,223.606);
+\begin{scope}[scale=.6666667]
+\fill[white] (103,188) rectangle (810,235);
+\fill[white] (103,235) rectangle (199,329);
+\draw[black,line width=.55pt] (103,188) rectangle (810,329);
+\foreach \xx in {199,304,409,511,611,712} \draw[black,line width=.45pt] (\xx,188)--(\xx,329);
+\foreach \yy in {235,282} \draw[black,line width=.45pt] (103,\yy)--(810,\yy);
+\node[font=\normalsize] at (252,212) {$ 2.45 $};
+\node[font=\normalsize] at (356,212) {$ 5.23 $};
+\node[font=\normalsize] at (460,212) {$ 3.76 $};
+\node[font=\normalsize] at (561,212) {$ 4.58 $};
+\node[font=\normalsize] at (661,212) {$ 7.74 $};
+\node[font=\normalsize] at (761,212) {$ 1.98 $};
+\node[font=\normalsize] at (150,258) {$3.75+$};
+\node[font=\normalsize] at (150,307) {$12.03-$};
+\end{scope}
+\end{scope}
+\pgfresetboundingbox\path[use as bounding box] (66.392,123.059) rectangle (542.272,223.606);
+\end{tikzpicture}

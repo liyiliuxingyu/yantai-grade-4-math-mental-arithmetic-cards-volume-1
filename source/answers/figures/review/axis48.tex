@@ -1,0 +1,12 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,draw=black,text=black]
+\draw[-{Stealth[length=4pt]},line width=.6pt](-.2,0)--(7.65,0);
+\foreach \i in {0,...,35} {\draw ({\i*.21},0)--({\i*.21},.075);}
+\foreach \i/\t in {0/0,10/0.1,20/0.2,30/0.3} {
+\draw ({\i*.21},0)--({\i*.21},.13);
+\node[above,inner sep=1pt] at ({\i*.21},.15) {$\t$};}
+\foreach \i/\t in {12/0.12,20/0.20,26/0.26} {
+\fill[answerred] ({\i*.21},0) circle (1.65pt);
+\draw[answerred,line width=.45pt] ({\i*.21},.1)--({\i*.21},.64);
+\node[above,inner sep=1pt,text=answerred] at ({\i*.21},.66) {$\t$};}
+\path[use as bounding box](-.3,-.08) rectangle (7.75,1.12);
+\end{tikzpicture}

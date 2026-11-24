@@ -1,0 +1,38 @@
+% 原书第90页第2题。仅调整标注布局，不填入答案。
+% 所有整数、小数、分数及作答框均置于数轴上方；引线在文字上下断开，避免穿字。
+\begin{tikzpicture}[x=1mm,y=-1mm,draw=black,text=black,
+  every node/.style={text=black,font=\normalsize,inner sep=.6pt},
+  tick/.style={line width=.5pt},
+  lead/.style={line width=.45pt},
+  tip/.style={-{Stealth[length=1.35mm,width=1.0mm]},line width=.45pt}]
+\node[anchor=north west] at (0,0) {①};
+\node[anchor=north west] at (84,0) {②};
+% First axis: 0 to 1, divided into tenths.
+\draw[line width=.6pt,-{Stealth[length=1.5mm,width=1.1mm]}] (10,31)--(80.5,31);
+\foreach \i in {0,...,10} \draw[tick] ({13+6.18*\i},31)--({13+6.18*\i},29.4);
+\node[anchor=south] at (13,28.1) {$0$};
+\node[anchor=south] at (74.8,28.1) {$1$};
+\node[anchor=south] (a) at (19.18,26.4) {$0.1$};
+\node[anchor=south] (b) at (56.26,26.4) {$\displaystyle\frac{7}{10}$};
+\node[draw,line width=.6pt,minimum width=9.6mm,minimum height=10mm,inner sep=0pt] (abox) at (19.18,7.0) {};
+\node[draw,line width=.6pt,minimum width=9.6mm,minimum height=5.65mm,inner sep=0pt] (bbox) at (56.26,5.2) {};
+\draw[lead] (abox.south)--([yshift=.7mm]a.north);
+\draw[lead] (bbox.south)--([yshift=.7mm]b.north);
+\draw[tip] ([yshift=-.7mm]a.south)--(19.18,30.2);
+\draw[tip] ([yshift=-.7mm]b.south)--(56.26,30.2);
+% Second axis: 0 to 0.1, divided into hundredths.
+\draw[line width=.6pt,-{Stealth[length=1.5mm,width=1.1mm]}] (94,31)--(164.5,31);
+\foreach \i in {0,...,10} \draw[tick] ({97+6.18*\i},31)--({97+6.18*\i},29.4);
+\node[anchor=south] at (97,28.1) {$0$};
+\node[anchor=south] at (158.8,28.1) {$0.1$};
+\node[anchor=south] (c) at (115.54,26.4) {$\displaystyle\frac{3}{100}$};
+\node[anchor=south] (d) at (127.90,26.4) {$0.05$};
+\node[draw,line width=.6pt,minimum width=9.6mm,minimum height=5.65mm,inner sep=0pt] (cbox) at (115.54,5.2) {};
+\node[draw,line width=.6pt,minimum width=9.6mm,minimum height=10mm,inner sep=0pt] (dbox) at (127.90,7.0) {};
+\draw[lead] (cbox.south)--([yshift=.7mm]c.north);
+\draw[lead] (dbox.south)--([yshift=.7mm]d.north);
+\draw[tip] ([yshift=-.7mm]c.south)--(115.54,30.2);
+\draw[tip] ([yshift=-.7mm]d.south)--(127.90,30.2);
+\pgfresetboundingbox
+\path[use as bounding box] (0,0) rectangle (166.3806,34.6770);
+\end{tikzpicture}

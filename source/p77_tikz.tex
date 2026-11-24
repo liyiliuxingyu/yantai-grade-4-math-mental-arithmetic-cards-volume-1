@@ -1,0 +1,76 @@
+% 原书第77页：按用户实拍照片逐格重绘。
+% 所有图使用相同的正方形格；文字字号继承正文；0=纯题目，1=红笔答案。
+\tikzset{p77grid/.style={draw=black,line width=.22pt},
+ p77given/.style={draw=black,line width=.75pt},
+ p77solution/.style={draw=answerred,line width=.85pt},
+ p77axis/.style={draw=black,line width=.55pt,dash pattern=on 2mm off 1mm}}
+% 第一图：对称轴位于第5列。网格在此列不画实线，保证对称轴确为虚线。
+\newcommand{\PSeventySevenSymmetry}[1]{%
+\begin{tikzpicture}[x=5mm,y=-5mm,font=\normalsize,text=black]
+\foreach \x in {0,1,2,3,4,6,7,8,9,10,11}{\draw[p77grid] (\x,0)--(\x,6);}
+\foreach \y in {0,...,6}{\draw[p77grid] (0,\y)--(11,\y);}
+\draw[p77axis] (5,0)--(5,6);
+\draw[p77given] (5,1)--(3,3)--(4,3)--(4,5)--(5,5);
+\ifnum#1=1\relax
+\draw[p77solution] (5,1)--(7,3)--(6,3)--(6,5)--(5,5);
+\fi
+\end{tikzpicture}}
+% 第二图：O=(6,3)，原三角形顶点(4,3),(5,1),(6,3)。
+% 向下为正的图纸坐标中，顺时针旋转90度：(dx,dy)->(-dy,dx)。
+\newcommand{\PSeventySevenRotation}[1]{%
+\begin{tikzpicture}[x=5mm,y=-5mm,font=\normalsize,text=black]
+\foreach \x in {0,...,11}{\draw[p77grid] (\x,0)--(\x,6);}
+\foreach \y in {0,...,6}{\draw[p77grid] (0,\y)--(11,\y);}
+\draw[p77given] (4,3)--(5,1)--(6,3)--cycle;
+\ifnum#1=1\relax
+\draw[p77solution] (6,3)--(6,1)--(8,2)--cycle;
+\fi
+\fill[black] (6,3) circle[radius=.65pt];
+\node[anchor=north,fill=white,inner sep=.6pt,text=black] at (6,3.2) {$O$};
+\end{tikzpicture}}
+% 小鱼：身体为三角形，尾巴为内凹四边形；同一轮廓平移，不重新猜测形状。
+\newcommand{\PSeventySevenFishPath}[1]{%
+\draw[#1] (9,3)--(11,5)--(9,7)--cycle;
+\draw[#1] (7,4)--(9,5)--(7,6)--(8,5)--cycle;}
+\newcommand{\PSeventySevenFish}[1]{%
+\begin{tikzpicture}[x=5mm,y=-5mm,font=\normalsize,text=black]
+\foreach \x in {0,...,26}{\draw[p77grid] (\x,0)--(\x,11);}
+\foreach \y in {0,...,11}{\draw[p77grid] (0,\y)--(26,\y);}
+\PSeventySevenFishPath{p77given}
+\node[text=black,fill=white,inner sep=.5pt] at (9.5,5.45) {$A$};
+\begin{scope}[shift={(8,-3)}]
+\PSeventySevenFishPath{p77given}
+\node[text=black,fill=white,inner sep=.5pt] at (9.5,5.45) {$B$};
+\end{scope}
+\ifnum#1=1\relax
+\begin{scope}[shift={(8,3)}]\PSeventySevenFishPath{p77solution}\end{scope}
+\fi
+\end{tikzpicture}}
+% 小树：按照片沿外轮廓顺次连线；顶部尖点落在半格位置。
+% 两层枝叶的折角、宽1格高2格的树干完整保留；不得添加横穿树冠的边。
+\newcommand{\PSeventySevenTreePath}[1]{%
+\draw[#1] (4.5,1)--(6,3)--(5,3)--(6,4)--(5,4)--(5,6)
+ --(4,6)--(4,4)--(3,4)--(4,3)--(3,3)--cycle;}
+\newcommand{\PSeventySevenTree}[1]{%
+\begin{tikzpicture}[x=5mm,y=-5mm,font=\normalsize,text=black]
+\foreach \x in {0,...,21}{\draw[p77grid] (\x,0)--(\x,7);}
+\foreach \y in {0,...,7}{\draw[p77grid] (0,\y)--(21,\y);}
+\PSeventySevenTreePath{p77given}
+\ifnum#1=1\relax
+\begin{scope}[shift={(11,0)}]\PSeventySevenTreePath{p77solution}\end{scope}
+\fi
+\end{tikzpicture}}
+% 第一大题的独立题干、两张图。第二个参数0不显示题干，供速查册使用。
+\newcommand{\PSeventySevenFirst}[2]{%
+\par\noindent\begin{minipage}[t]{.485\linewidth}
+\ifnum#2=1\relax
+\begin{minipage}[t][15mm][t]{\linewidth}① 画出下面图形的另一半，使它\\成为一个轴对称图形。\end{minipage}\par
+\fi
+\centering\PSeventySevenSymmetry{#1}\par
+\end{minipage}\hfill
+\begin{minipage}[t]{.485\linewidth}
+\ifnum#2=1\relax
+\begin{minipage}[t][15mm][t]{\linewidth}② 画出下面三角形绕$O$点顺时\\针旋转$90^\circ$后得到的图形。\end{minipage}\par
+\fi
+\centering\PSeventySevenRotation{#1}\par
+\end{minipage}\par}

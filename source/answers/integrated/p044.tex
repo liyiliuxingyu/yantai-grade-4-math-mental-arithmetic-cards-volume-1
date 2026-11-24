@@ -1,0 +1,108 @@
+\QHeading{第1题　分一分。（填序号。）}
+
+\par\noindent\makebox[\linewidth][c]{
+\begin{tikzpicture}[x=1bp,y=-1bp,color=black,draw=black,text=black]
+\begin{scope}\clip (56.0,124.0) rectangle (539.0,266.67);
+\input{hd_assets/questions/p049_s1.tex}
+\begin{scope}[color=answerred,draw=answerred,text=answerred]\input{hd_assets/answers/p049_s1.tex}\end{scope}
+\end{scope}\pgfresetboundingbox\path[use as bounding box] (56.0,124.0) rectangle (539.0,266.67);
+\end{tikzpicture}}\par
+\par\noindent
+
+
+
+
+\par
+
+
+
+\par\noindent
+
+\QHeading{第2题　按要求画一画。}
+
+\par\noindent\makebox[\linewidth][c]{
+\begin{tikzpicture}[x=1bp,y=-1bp,color=black,draw=black,text=black]
+\begin{scope}\clip (56.0,349.0) rectangle (547.0,488.67);
+\input{hd_assets/questions/p049_s2.tex}
+\begin{scope}[color=answerred,draw=answerred,text=answerred]\input{hd_assets/answers/p049_s2.tex}\end{scope}
+\end{scope}\pgfresetboundingbox\path[use as bounding box] (56.0,349.0) rectangle (547.0,488.67);
+\end{tikzpicture}}\par
+
+\PlainItem{在方格纸上分别画一个底是5厘米和一个底是7厘米的平行四边形，}
+\par
+
+\PlainItem{并各画出一条高。（每个小方格的边长为1厘米。）}
+
+
+\par\noindent
+
+\QHeading{第3题　分别画出下面平行四边形底边上的高。}
+
+\par\noindent\makebox[\linewidth][c]{
+\begin{tikzpicture}[x=1bp,y=-1bp,color=black,draw=black,text=black]
+\begin{scope}\clip (56.0,516.0) rectangle (526.0,613.33);
+\input{hd_assets/questions/p049_s3.tex}
+\begin{scope}[color=answerred,draw=answerred,text=answerred]\input{hd_assets/answers/p049_s3.tex}\end{scope}
+\end{scope}\pgfresetboundingbox\path[use as bounding box] (56.0,516.0) rectangle (526.0,613.33);
+\end{tikzpicture}}\par
+
+
+
+\par
+
+
+
+
+
+
+
+\par\noindent
+
+\QHeading{第2、3题　同一底上的高可以有不同位置}
+
+\Answer{平行四边形两条平行底边之间的垂线段可以有很多条，长度相同；从一个指定点向指定直线作垂线则只有一条。图中两条虚线都是以BC为底的一条高。}
+\par\smallskip\noindent\begin{adjustbox}{max width=\linewidth,center}
+\begin{tikzpicture}[x=.8cm,y=.8cm,font=\normalsize]
+\coordinate (B) at (0,0);\coordinate (C) at (5,0);\coordinate (A) at (1,2.5);\coordinate (E) at (6,2.5);
+\draw[black,thick] (B)--(C)--(E)--(A)--cycle;
+\draw[answerred,dashed,thick] (1,2.5)--(1,0) (4,2.5)--(4,0);
+\node[right,text=answerred] at (1,1.25){高};\node[right,text=answerred] at (4,1.25){高};
+\draw[answerred] (1,.2)--(1.2,.2)--(1.2,0) (4,.2)--(4.2,.2)--(4.2,0);
+\node[below] at (B){$B$};\node[below] at (C){$C$};\node[below] at (2.5,0){底};
+\end{tikzpicture}
+\end{adjustbox}\par\smallskip
+
+\QHeading{第4题　画一个以$BC$为底、$AD$为高的平行四边形。}
+
+\par\noindent\makebox[\linewidth][c]{
+\begin{tikzpicture}[x=1bp,y=-1bp,color=black,draw=black,text=black]
+\begin{scope}\clip (155.0,639.0) rectangle (454.0,761.0);
+\input{hd_assets/questions/p049_s4.tex}
+\begin{scope}[color=answerred,draw=answerred,text=answerred]\input{hd_assets/answers/p049_s4.tex}\end{scope}
+\end{scope}\pgfresetboundingbox\path[use as bounding box] (155.0,639.0) rectangle (454.0,761.0);
+\end{tikzpicture}}\par
+
+
+
+\par
+
+
+
+\QHeading{第4题　让A作顶点的两种画法}
+
+\Answer{固定BC和AD不变，可从A向右或向左画与BC平行且等长的边，再连接对应端点。下面两图都以BC为底、AD为高。}
+\par\smallskip\noindent\begin{adjustbox}{max width=\linewidth,center}
+\begin{tikzpicture}[x=.42cm,y=.42cm,font=\normalsize]
+\foreach \shift/\endx in {0/8,5.8/-4}{
+\begin{scope}[xshift=\shift cm]
+\draw[black,thick] (0,0)--(6,0);\draw[answerred,dashed,thick] (2,0)--(2,3);
+\node[right,text=answerred] at (2,1.5){高};
+\draw[black] (2,.25)--(2.25,.25)--(2.25,0);
+\ifnum\endx>0\draw[answerred,thick] (0,0)--(2,3)--(8,3)--(6,0);\else\draw[answerred,thick] (0,0)--(-4,3)--(2,3)--(6,0);\fi
+\node[above] at (2,3){$A$};\node[below] at (0,0){$B$};\node[below] at (6,0){$C$};\node[below] at (2,0){$D$};
+\end{scope}}
+\end{tikzpicture}
+\end{adjustbox}\par\smallskip
+\Answer{若题目只要求AD作为高，并不额外要求A必须是顶点，还可以改变另一条底边的位置，但应保证A在该底边上。图示不是所有可能图形的穷举。}
+
+\Answer{作高复核：高用虚线，旁边写“高”，垂足处画直角符号；以题目指定的底为准，必要时用虚线延长底边。}

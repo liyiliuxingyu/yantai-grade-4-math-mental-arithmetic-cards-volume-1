@@ -1,0 +1,40 @@
+% 按原题条件重新绘制的独立 TikZ 图；不含作答内容。
+\begin{tikzpicture}[x=1mm,y=-1mm,font=\normalsize,draw=black,text=black,line cap=round,line join=round]
+\path[use as bounding box] (0,0) rectangle (168,108);
+\node[anchor=north west,text width=76mm,align=left] at (1,1) {① 在点子图上任意画出两条平行线。};
+\node[anchor=north west,text width=78mm,align=left] at (87,1) {② 在下面这条直线的左右两侧分别画出一条与它平行的直线。};
+\foreach \i in {0,...,12}{\foreach \j in {0,...,7}{\fill ({12+\i*4},{19+\j*4}) circle (.2mm);}}
+\foreach \i in {0,...,12}{\foreach \j in {0,...,7}{\fill ({99+\i*4},{19+\j*4}) circle (.2mm);}}
+\draw[outline] (121,45)--(133,19);
+\node[anchor=north west,text width=76mm,align=left] at (1,55) {③ 在方格纸上画一组垂线。};
+\node[anchor=north west,text width=78mm,align=left] at (87,55) {④ 分别画出下面这条直线的一条垂线和一条平行线。};
+\draw[hdgrid] (12,74) rectangle (57,104);
+\draw[hdgrid] (17,74)--(17,104);
+\draw[hdgrid] (22,74)--(22,104);
+\draw[hdgrid] (27,74)--(27,104);
+\draw[hdgrid] (32,74)--(32,104);
+\draw[hdgrid] (37,74)--(37,104);
+\draw[hdgrid] (42,74)--(42,104);
+\draw[hdgrid] (47,74)--(47,104);
+\draw[hdgrid] (52,74)--(52,104);
+\draw[hdgrid] (12,79)--(57,79);
+\draw[hdgrid] (12,84)--(57,84);
+\draw[hdgrid] (12,89)--(57,89);
+\draw[hdgrid] (12,94)--(57,94);
+\draw[hdgrid] (12,99)--(57,99);
+\draw[hdgrid] (99,74) rectangle (144,104);
+\draw[hdgrid] (104,74)--(104,104);
+\draw[hdgrid] (109,74)--(109,104);
+\draw[hdgrid] (114,74)--(114,104);
+\draw[hdgrid] (119,74)--(119,104);
+\draw[hdgrid] (124,74)--(124,104);
+\draw[hdgrid] (129,74)--(129,104);
+\draw[hdgrid] (134,74)--(134,104);
+\draw[hdgrid] (139,74)--(139,104);
+\draw[hdgrid] (99,79)--(144,79);
+\draw[hdgrid] (99,84)--(144,84);
+\draw[hdgrid] (99,89)--(144,89);
+\draw[hdgrid] (99,94)--(144,94);
+\draw[hdgrid] (99,99)--(144,99);
+\draw[outline] (99,89)--(144,89);
+\end{tikzpicture}

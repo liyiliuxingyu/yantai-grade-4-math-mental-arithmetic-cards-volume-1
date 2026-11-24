@@ -1,0 +1,11 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,draw=black,text=black]
+\draw[-{Stealth[length=4pt]},line width=.6pt](-.1,0)--(7.25,0);
+\foreach \i in {0,...,10}\draw ({\i*.68},0)--({\i*.68},.1);
+\node[above,inner sep=1pt] at(0,.12){$0$};
+\node[above,inner sep=1pt] at(6.8,.12){$1$};
+\node[above,inner sep=1pt] at(0.6800,.13){$0.1$};
+\node[draw=answerred,text=answerred,inner sep=3pt] at(0.6800,1.2){$\displaystyle \frac{1}{10}$};
+\node[above,inner sep=1pt] at(4.7600,.13){$\frac{7}{10}$};
+\node[draw=answerred,text=answerred,inner sep=3pt] at(4.7600,1.2){$\displaystyle 0.7$};
+\path[use as bounding box](-.2,-.08) rectangle (7.4,1.65);
+\end{tikzpicture}

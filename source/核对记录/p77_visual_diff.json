@@ -1,0 +1,40 @@
+[
+  {
+    "file": "口算答案.pdf",
+    "pages": 403,
+    "changed_pages_72dpi": [
+      303,
+      304
+    ],
+    "expected": [
+      303,
+      304
+    ],
+    "only_expected_changed": true,
+    "bookmarks_unchanged": true
+  },
+  {
+    "file": "口算题目.pdf",
+    "pages": 100,
+    "changed_pages_72dpi": [
+      77
+    ],
+    "expected": [
+      77
+    ],
+    "only_expected_changed": true,
+    "bookmarks_unchanged": true
+  },
+  {
+    "file": "口算速查.pdf",
+    "pages": 100,
+    "changed_pages_72dpi": [
+      77
+    ],
+    "expected": [
+      77
+    ],
+    "only_expected_changed": true,
+    "bookmarks_unchanged": true
+  }
+]

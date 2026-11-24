@@ -1,0 +1,23 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,draw=black,text=black]
+\begin{scope}
+\clip (66.667,504.667) rectangle (548.667,783.948);
+\q{103}{760}{717}{12.5}{① 一筐桃连筐重25.6千克，卖出一半后，连筐重13.8千克。原来桃有}
+\q{103}{803}{717}{12.5}{　多重？筐有多重？}
+\q{104}{936}{714}{12.5}{② 如图，把一根4米长的竹竿垂直插入水池中，竹竿入泥部分长0.4}
+\q{104}{979}{714}{12.5}{　米，露出水面的部分长0.83米，水深多少米？}
+\begin{scope}[scale=.6666667]
+\fill[black] (640,1132) rectangle (806,1145);
+\draw[hdoutline] (640,1020)--(640,1145)--(806,1145)--(806,1020);
+\draw[black,line width=.55pt] (640,1050)--(806,1050);
+\foreach \yy in {1054,1064,...,1124} \draw[black,dashed,line width=.35pt] (642,\yy)--(804,\yy);
+\draw[hdoutline,fill=white] (719,1024)--(721,1143)--(727,1143)--(725,1024)--cycle;
+\draw[black,line width=.4pt] (712,1050)--(712,1132);
+\node[font=\normalsize] at (701,1091) {?};
+\draw[black,line width=.4pt] (731,1024)--(731,1050);
+\node[anchor=west,font=\normalsize] at (735,1034) {0.83米};
+\draw[black,line width=.4pt] (732,1132)--(738,1157);
+\node[anchor=west,font=\normalsize] at (738,1157) {0.4米};
+\end{scope}
+\end{scope}
+\pgfresetboundingbox\path[use as bounding box] (66.667,504.667) rectangle (548.667,783.948);
+\end{tikzpicture}

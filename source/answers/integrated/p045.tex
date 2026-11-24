@@ -1,0 +1,121 @@
+\QHeading{第1题　填一填。}
+
+\par\noindent\makebox[\linewidth][c]{
+\begin{tikzpicture}[x=1bp,y=-1bp,color=black,draw=black,text=black]
+\begin{scope}\clip (56.0,113.0) rectangle (401.0,244.0);
+\input{hd_assets/questions/p050_s1.tex}
+\begin{scope}[color=answerred,draw=answerred,text=answerred]\input{hd_assets/answers/p050_s1.tex}\end{scope}
+\end{scope}\pgfresetboundingbox\path[use as bounding box] (56.0,113.0) rectangle (401.0,244.0);
+\end{tikzpicture}}\par
+\par\noindent
+
+
+
+
+\par
+
+\par\noindent
+
+\QHeading{第2题　分别画出下面梯形底边上的高。}
+
+\par\noindent\makebox[\linewidth][c]{
+\begin{tikzpicture}[x=1bp,y=-1bp,color=black,draw=black,text=black]
+\begin{scope}\clip (56.0,270.0) rectangle (541.0,370.67);
+\input{hd_assets/questions/p050_s2.tex}
+\begin{scope}[color=answerred,draw=answerred,text=answerred]\input{hd_assets/answers/p050_s2.tex}\end{scope}
+\end{scope}\pgfresetboundingbox\path[use as bounding box] (56.0,270.0) rectangle (541.0,370.67);
+\end{tikzpicture}}\par
+
+
+
+\par
+
+
+
+
+
+
+
+\par\noindent
+
+\QHeading{第3题　画一画，分一分。}
+
+\par\noindent\makebox[\linewidth][c]{
+\begin{tikzpicture}[x=1bp,y=-1bp,color=black,draw=black,text=black]
+\begin{scope}\clip (56.0,512.0) rectangle (459.0,584.0);
+\input{hd_assets/questions/p050_s3.tex}
+\begin{scope}[color=answerred,draw=answerred,text=answerred]\input{hd_assets/answers/p050_s3.tex}\end{scope}
+\end{scope}\pgfresetboundingbox\path[use as bounding box] (56.0,512.0) rectangle (459.0,584.0);
+\end{tikzpicture}}\par
+
+\PlainItem{① 在图形中各画一条线段，把图形分成一个平行四边形和一个三角形。}
+\par
+
+
+
+\PlainItem{② 在每个图形中各画一条线段，把图形分成两个完全相同的梯形。}
+
+
+\par\noindent
+
+\QHeading{第3题①　从另一端分割梯形}
+
+\Answer{在第一幅梯形中，除过右上顶点作平行于左腰的分割线外，也可以过左上顶点作平行于右腰的分割线。倒放的梯形同理，可从另一端作。}
+\par\smallskip\noindent\begin{adjustbox}{max width=\linewidth,center}
+\begin{tikzpicture}[x=.035cm,y=-.035cm,font=\normalsize]
+\begin{scope}[shift={(-300,-647)}]
+\draw[black,thick] (300,715)--(322,647)--(399,647)--(440,715)--cycle;
+\draw[answerred,thick] (322,647)--(363,715);
+\end{scope}
+\begin{scope}[xshift=5.5cm,shift={(-559,-648)}]
+\draw[black,thick] (559,648)--(685,648)--(642,715)--(583,715)--cycle;
+\draw[answerred,thick] (583,715)--(626,648);
+\end{scope}
+\end{tikzpicture}
+\end{adjustbox}\par\smallskip
+\Answer{新增红色线段各把原梯形分成一个平行四边形和一个三角形。分割线用实线；它们不是作高线。}
+
+\QHeading{第3题②　分成两个全等梯形的另一些画法}
+
+\Answer{经过图形中心，连接一对关于中心相对称的上下底上的点，可以得到两块完全相同的图形；为得到梯形，分割线不能与原来的腰平行。}
+\par\smallskip\noindent\begin{adjustbox}{max width=\linewidth,center}
+\begin{tikzpicture}[x=.65cm,y=.65cm,font=\normalsize]
+\draw[black,thick] (0,0)--(4,0)--(5,2)--(1,2)--cycle;
+\draw[answerred,thick] (1.2,0)--(3.8,2);
+\fill[answerred] (2.5,1) circle (1.4pt);
+\begin{scope}[xshift=4.4cm]
+\draw[black,thick] (0,0) rectangle (4,2);
+\draw[answerred,thick] (1,0)--(3,2);
+\fill[answerred] (2,1) circle (1.4pt);
+\end{scope}
+\end{tikzpicture}
+\end{adjustbox}\par\smallskip
+\Answer{两部分可绕中心旋转180度后重合。矩形不能简单从中间画一条竖线来代替本题答案，否则分出的两块都是长方形，不是本题“只有一组对边平行”的梯形。}
+
+\QHeading{第4题　在下面的点子图中分别画一个长方形、一个正方形、一个平行四边形和一个等腰梯形。}
+
+\par\noindent\makebox[\linewidth][c]{
+\begin{tikzpicture}[x=1bp,y=-1bp,color=black,draw=black,text=black]
+\begin{scope}\clip (70.0,608.0) rectangle (548.0,766.0);
+\input{hd_assets/questions/p050_s4.tex}
+\begin{scope}[color=answerred,draw=answerred,text=answerred]\input{hd_assets/answers/p050_s4.tex}\end{scope}
+\end{scope}\pgfresetboundingbox\path[use as bounding box] (70.0,608.0) rectangle (548.0,766.0);
+\end{tikzpicture}}\par
+
+
+
+\par
+
+
+
+
+
+
+
+
+
+\QHeading{第2、4题　答案不唯一的范围}
+
+\Answer{梯形的高可以从一条底边上的不同点向另一底边所在直线作出，但必须与两底垂直。长方形、正方形、平行四边形、等腰梯形的自由作图可改变大小和位置；应核对各自的边、角条件，而不能只按本册示例的外观判断。}
+
+\Answer{作高复核：高用虚线，旁边写“高”，垂足处画直角符号；以题目指定的底为准，必要时用虚线延长底边。}

@@ -1,0 +1,24 @@
+% 按原题条件重新绘制的独立 TikZ 图；不含作答内容。
+\begin{tikzpicture}[x=1mm,y=-1mm,font=\normalsize,draw=black,text=black,line cap=round,line join=round]
+\path[use as bounding box] (0,0) rectangle (168,59);
+\node[] at (2,2) {①};
+\node[] at (86,2) {②};
+\node[] at (9,25) {甲港};
+\node[] at (73,25) {乙港};
+\draw[outline] (18,25) .. controls (20,14) and (25,25) .. (31,22) .. controls (38,11) and (42,16) .. (45,22) .. controls (50,28) and (52,13) .. (60,20) .. controls (63,22) and (65,24) .. (66,25);
+\draw[outline] (18,25) .. controls (30,36) and (53,36) .. (66,25);
+\draw[outline] (18,25)--(66,25);
+\node[] at (123,4) {村庄};
+\draw[outline] (98,41)--(123,10)--(149,41);
+\draw[outline] (123,10)--(123,41);
+\draw[outline] (123,10)..controls(121,15)and(123,18)..(119,22)..controls(116,24)and(120,25)..(117,28)..controls(113,31)and(117,35)..(113,41);
+\draw[outline] (96,41) rectangle (151,43);
+\draw[thinrule] (123,39)--(125,39)--(125,41);
+\node[] at (158,42) {公路};
+\node[anchor=west] at (1,53) {理由：};
+\draw[thinrule] (14,55)--(76,55);
+\node[] at (78,54) {。};
+\node[anchor=west] at (87,53) {理由：};
+\draw[thinrule] (100,55)--(162,55);
+\node[] at (164,54) {。};
+\end{tikzpicture}

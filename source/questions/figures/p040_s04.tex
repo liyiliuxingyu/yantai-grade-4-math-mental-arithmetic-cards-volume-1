@@ -1,0 +1,13 @@
+% 按原题条件重新绘制的独立 TikZ 图；不含作答内容。
+\begin{tikzpicture}[x=1mm,y=-1mm,font=\normalsize,draw=black,text=black,line cap=round,line join=round]
+\path[use as bounding box] (0,0) rectangle (170,67);
+\node[anchor=north west,align=left] at (1,0) {① 既是直角三角形，\\又是等腰三角形。};
+\draw[thinrule] (4,18) rectangle (49,63);
+\foreach \i in {0,...,9}{\foreach \j in {0,...,9}{\fill ({8.5+\i*4},{22.5+\j*4}) circle (.2mm);}}
+\node[anchor=north west,align=left] at (58,0) {② 既是钝角三角形，\\又是等腰三角形。};
+\draw[thinrule] (61,18) rectangle (106,63);
+\foreach \i in {0,...,9}{\foreach \j in {0,...,9}{\fill ({65.5+\i*4},{22.5+\j*4}) circle (.2mm);}}
+\node[anchor=north west,align=left] at (115,0) {③ 既是锐角三角形，\\又是等腰三角形。};
+\draw[thinrule] (118,18) rectangle (163,63);
+\foreach \i in {0,...,9}{\foreach \j in {0,...,9}{\fill ({122.5+\i*4},{22.5+\j*4}) circle (.2mm);}}
+\end{tikzpicture}
